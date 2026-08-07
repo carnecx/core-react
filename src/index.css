@@ -1,0 +1,36 @@
+:root {
+  /* Colores principales */
+  --color-primario: #1269d3;
+  --color-primario-claro: #2385ea;
+  --gradiente-primario: linear-gradient(90deg, var(--color-primario), var(--color-primario-claro));
+
+  /* Texto */
+  --color-titulo: #173b66;
+  --color-texto: #1d2d3c;
+  --color-texto-secundario: #6a7785;
+
+  /* Fondos y bordes */
+  --color-fondo-suave: #eef8ff;
+  --color-borde: #dce8f2;
+  --color-blanco: #fff;
+
+  /* Estados */
+  --color-exito-fondo: #e9f9f1;
+  --color-exito-texto: #11865b;
+  --color-error-fondo: #f8d7da;
+  --color-error-texto: #842029;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    linear-gradient(rgba(238, 247, 255, .94), rgba(238, 247, 255, .94)),
+    radial-gradient(circle at top left, #d7ecff, transparent 35%),
+    radial-gradient(circle at bottom right, #d8f7f0, transparent 35%);
+  color: var(--color-texto);
+}
