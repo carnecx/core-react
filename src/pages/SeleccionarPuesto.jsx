@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getPuestosActivos } from '../services/puestosService';
+import { getPuestosDisponibles } from '../services/puestosService';
 
 function SeleccionarPuesto() {
   const [puestos, setPuestos] = useState([]);
@@ -11,7 +11,7 @@ function SeleccionarPuesto() {
   useEffect(() => {
     const cargarPuestos = async () => {
       try {
-        const data = await getPuestosActivos();
+        const data = await getPuestosDisponibles();
         setPuestos(data);
       } catch {
         setError('No se pudieron cargar los puestos disponibles.');

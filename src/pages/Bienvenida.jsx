@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 function Bienvenida() {
   const navigate = useNavigate();
@@ -34,9 +34,8 @@ function Bienvenida() {
               Inicio
             </a>
 
-            <a href="/oferentes/seleccionar-puesto">
-              Puestos
-            </a>
+            <Link to="/puestos">Puestos</Link>
+            
           </nav>
         </aside>
 

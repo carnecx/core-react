@@ -7,6 +7,8 @@ import OferentesPorPuesto from "./pages/OferentesPorPuesto";
 import OferenteDetalle from "./pages/OferenteDetalle";
 import Postulacion from "./pages/Postulacion";
 import SeleccionarPuesto from "./pages/SeleccionarPuesto";
+import ListadoPuestos from "./pages/ListadoPuestos";
+import OferentesElegibles from "./pages/OferentesElegibles";
 
 import RutaProtegida from "./components/RutaProtegida";
 
@@ -47,6 +49,24 @@ function App() {
         <Route
           path="/oferentes/postulacion"
           element={<Postulacion />}
+        />
+        
+        <Route
+          path="/puestos"
+          element={
+            <RutaProtegida>
+              <ListadoPuestos />
+            </RutaProtegida>
+          }
+        />
+
+        <Route
+          path="/puestos/oferentes"
+          element={
+            <RutaProtegida>
+              <OferentesElegibles />
+            </RutaProtegida>
+          }
         />
 
       </Routes>

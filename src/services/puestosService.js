@@ -4,3 +4,8 @@ export const getPuestosActivos = async () => {
   const response = await api.get('/api/puestos/activos');
   return response.data;
 };
+
+export const getPuestosDisponibles = async () => {
+  const response = await api.get('/api/puestos/disponibles');
+  return response.data;
+};
